@@ -27,9 +27,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onKeyDown(final int keyCode, KeyEvent event) {
-		// Get the player #
-		boolean handled = false;
-
 		// Handle the input
 		switch (keyCode) {
 			case OuyaController.BUTTON_O:
@@ -43,12 +40,9 @@ public class MainActivity extends Activity {
 				break;
 			case OuyaController.BUTTON_A:
 				Log.d(TAG, "OUYA button A");
-				// You now have the key pressed and the player # that pressed it
-				// doSomethingWithKey();
-				handled = true;
 				break;
 		}
-		return handled || super.onKeyDown(keyCode, event);
+		return true;
 	}
 
 	@Override
